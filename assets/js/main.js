@@ -52,8 +52,3 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
-
-function onDetail(nome){
-    localStorage.setItem('storageNome', nome)
-    window.location = 'detail.html'
-}

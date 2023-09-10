@@ -1,8 +1,8 @@
 const pokemonList = document.getElementById('pokemonList')
 const loadMoreButton = document.getElementById('loadMoreButton')
 
-const maxRecords = 151
-const limit = 10
+const maxRecords = 251;
+const limit = 8;
 let offset = 0;
 
 
@@ -16,6 +16,12 @@ function convertPokemonToLi(pokemon) {
                 <ol class="types">
                     ${pokemon.types.map((type) => `<li class="type ${type}">${type}</li>`).join('')}
                 </ol>
+
+                <!--<button class="btn" type="button" onclick="onDetail('${pokemon.name}')"}>
+                Detail</button> -->
+            <button class="btn" type="button" onclick="openDetails('${pokemon.name}');"}>
+                Detail
+            </button>
 
                 <img src="${pokemon.photo}" alt="${pokemon.name}">
 
@@ -46,3 +52,8 @@ loadMoreButton.addEventListener('click', () => {
         loadPokemonItens(offset, limit)
     }
 })
+
+function onDetail(nome){
+    localStorage.setItem('storageNome', nome)
+    window.location = 'detail.html'
+}

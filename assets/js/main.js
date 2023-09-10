@@ -20,7 +20,7 @@ function convertPokemonToLi(pokemon) {
                 <!--<button class="btn" type="button" onclick="onDetail('${pokemon.name}')"}>
                 Detail</button> -->
             <button class="btn" type="button" onclick="openDetails('${pokemon.name}');"}>
-                Detail
+                <img src="/assets/img/pokeball.svg" alt="Pokebola" style="width: 30px; height: 30px;">
             </button>
 
                 <img src="${pokemon.photo}" alt="${pokemon.name}">
